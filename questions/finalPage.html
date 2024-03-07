@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="index.html"></script>
+    <script src = "question10.html"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Luzes Negras Info</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #02021C;
+        }
+        .container {
+            text-align: center;
+            position: relative;
+        }
+        h1{
+            display: block;
+            font-size: 80px;
+            margin: 10px;
+        }
+        #title_{
+            margin-top: 200px;
+            text-align: center;
+            color: #fff;
+        }
+        .menu_icon{
+            font-size: 50px;
+            background-color: transparent;
+            color:#fff;
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            cursor: pointer;
+            }
+            .btnInfo{
+                float: left;
+            }
+            .btnInsta{
+                float: right;
+            }
+            #menuIcons{
+                text-align: center;
+                margin: 20px;
+                transform: translateY(200px);
+            }
+            #btnRePlay {
+                margin: 40px;
+                font-family: 'Times New Roman', cursive, sans-serif;
+                width: 250px;
+                height: 100px;
+                cursor: pointer;
+                background-color: #02021C;
+                color: #fff;
+                border-color: #fff;
+                border-radius: 100px;
+                font-size: 43px
+            }
+            @media((min-width:320px) and (max-width: 1248px)){
+                .container {
+                    text-align: center;
+                    position: relative;
+                }
+                h1{
+                    display: block;
+                    font-size: 40px;
+                }
+                #title_{
+                    margin-top: 50px;
+                    text-align: center;
+                    color: #fff;
+                }
+                .menu_icon{
+                    font-size: 35px;
+                    background-color: transparent;
+                    color:#fff;
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    }
+                    .btnInfo{
+                        float: left;
+                    }
+                    .btnInsta{
+                        float: right;
+                    }
+                    #menuIcons{
+                        text-align: center;
+                        margin: 20px;
+                        transform: translateY(200px);
+                    }
+                    #btnRePlay {
+                        margin-top: 100px;
+                        font-family: 'Times New Roman', cursive, sans-serif;
+                        width: 150px;
+                        height: 50px;
+                        cursor: pointer;
+                        background-color: #02021C;
+                        color: #fff;
+                        border-color: #fff;
+                        border-radius: 100px;
+                        font-size: 23px
+                    }
+            }
+    </style>        
+    </head>
+    <body>
+        <div id = "title_">
+            <h1>
+                Sua pontuação:  
+                <br>
+                <span id = "quest"></span>/10
+            </h1>
+            <a href="../questions/1/question1.html" id = "title_" onclick="zerarQuest()">
+                <button id = "btnRePlay">
+                    <i class = "fas fa-sync"></i>
+                </button>
+            </a>
+        </div>
+
+        <div id = "menuIcons">
+            <hr>
+            <a href = "../info.html" class = " menu_icon btnInfo" onclick="zerarQuest()">
+                <i class = "fas fa-info-circle"></i>
+            </a>
+            <a href="https://www.instagram.com/luzes.negras/" class = " menu_icon btnInsta" target="_blank">
+                <i class ="fab fa-instagram"></i>
+            </a>
+            <a href = "../index.html" class = "menu_icon btnHome" onclick = "zerarQuest()">
+                <i class = "fas fa-home"></i>
+            </a>
+            <hr>
+        </div>
+        <script>
+        var quest = localStorage.getItem('quest');
+        document.getElementById('quest').textContent = quest;
+    
+        function zerarQuest() {
+            quest = 0;
+            localStorage.setItem('quest', quest);
+        }
+        </script>
+    </body>
+</html>
+
